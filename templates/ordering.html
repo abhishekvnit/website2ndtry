@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Task Name</th>
+      <th>Activity</th>
+      <th>Planned Start</th>
+      <th>Planned Finish</th>
+      <th>Actual Start</th>
+      <th>Actual Finish</th>
+      <th>PGMA</th>
+      <th>Parent WBS level</th>
+    </tr>
+
+
+    {% for t in talcherdb %}
+    <tr>
+      <td>{{t.sn}}</td>
+      <td>{{t.task_name}}</td>
+      <td>{{t.activity_type}}</td>
+      <td>{{t.planned_start}}</td>
+      <td>{{t.planned_finish}}</td>
+      <td>{{t.actual_start}}</td>
+      <td>{{t.actual_finish}}</td>
+      <td>{{t.pgma}}</td>
+      <td>{{t.parent_wbs_level}}</td>
+    </tr>
+
+    {% endfor %}
+
+
+
+  </table>
+
+
+</div>
+
+
+
+
+
+{% endblock body %}
